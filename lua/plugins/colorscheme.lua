@@ -5,8 +5,9 @@ return {
     opts = {
       theme = "dark",
       fade_nc = true,
-      diable = {
+      disable = {
         background = true,
+        float_background = true,
       },
     },
   },
