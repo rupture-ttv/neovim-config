@@ -11,6 +11,13 @@ return {
 		},
 		keys = {
 			{ "<leader>e", "<cmd>Neotree toggle<cr>", desc = "NeoTree" },
+			{
+				"<leader>be",
+				function()
+					require("neo-tree.command").execute({ source = "buffers", toggle = true })
+				end,
+				desc = "Buffer explorer",
+			},
 		},
 		config = function()
 			require("neo-tree").setup({
@@ -47,6 +54,26 @@ return {
 						expander_expanded = "",
 						expander_highlight = "NeoTreeExpander",
 					},
+					git_status = {
+						symbols = {
+							-- Change type
+							added = "", -- or "✚", but this is redundant info if you use git_status_colors on the name
+							modified = "", -- or "", but this is redundant info if you use git_status_colors on the name
+							deleted = "✖", -- this can only be used in the git_status source
+							renamed = "󰁕", -- this can only be used in the git_status source
+							-- Status type
+							untracked = "",
+							ignored = "",
+							unstaged = "󰄱",
+							staged = "",
+							conflict = "",
+						},
+					},
+				},
+				filesystem = {
+					bind_to_cwd = false,
+					follow_current_file = { enabled = true },
+					use_libuv_file_watcher = true,
 				},
 			})
 		end,
