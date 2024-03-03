@@ -5,5 +5,6 @@ vim.cmd("set shiftwidth=2")
 vim.cmd("set scl=no")
 vim.cmd("set number")
 vim.cmd("set relativenumber")
+vim.cmd("set nowrap")
 
 vim.g.mapleader = " "
