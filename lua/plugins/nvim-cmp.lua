@@ -90,6 +90,9 @@ return {
 			lspconfig.rust_analyzer.setup({
 				capabilities = capabilities,
 			})
+			lspconfig.omnisharp.setup({
+				capabilities = capabilities,
+			})
 
 			-- Set configuration for specific filetype.
 			cmp.setup.filetype("gitcommit", {
