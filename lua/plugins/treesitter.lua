@@ -23,6 +23,7 @@ local M = {
 				"regex",
 				"toml",
 				"yaml",
+				"c_sharp",
 			},
 			sync_install = false,
 			highlight = { enable = true },
