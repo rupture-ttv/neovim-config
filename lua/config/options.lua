@@ -8,3 +8,5 @@ vim.cmd("set relativenumber")
 vim.cmd("set nowrap")
 
 vim.g.mapleader = " "
+
+vim.cmd("autocmd FileType cs setlocal commentstring=//\\ %s")
